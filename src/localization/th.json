@@ -1,0 +1,75 @@
+{
+  "login": {
+    "welcome": "ยินดีต้อนรับเข้าสู่ระบบ",
+    "email": "อีเมล์",
+    "password": "รหัสผ่าน",
+    "submit": "ส่ง",
+    "error": "กรุณากรอกอีเมล์และรหัสผ่าน!",
+    "register": "ท่านสามารถลงทะเบียนได้ที่นี่"
+  },
+  "register": {
+    "title": "ลงทะเบียนผู้ใช้ใหม่",
+    "name": "ชื่อ",
+    "email": "อีเมล์",
+    "password": "รหัสผ่าน",
+    "confirmPassword": "ยืนยันรหัสผ่าน",
+    "submit": "ลงทะเบียน",
+    "error": "กรุณายืนยันรหัสผ่าน!",
+    "passwordMismatch": "รหัสผ่านไม่ตรงกัน!",
+    "goToLogin": "ไปที่หน้าล็อกอิน"
+  },
+  "sidebar": {
+    "user_mgmt": "จัดการผู้ใช้",
+    "users": "ผู้ใช้",
+    "roles": "บทบาท",
+    "permissions": "สิทธิ์",
+    "students": "นักเรียน",
+    "teachers": "ครู",
+    "courses": "คอร์ส",
+    "manage_courses": "จัดการคอร์ส",
+    "course_categories": "หมวดหมู่คอร์ส",
+    "applications": "ใบสมัคร",
+    "apply_courses": "สมัครคอร์ส",
+    "completion_records": "ผลการเรียน"
+  },
+  "student": {
+    "add": "เพิ่มนักเรียน",
+    "modal_title": "ฟอร์มนักเรียน",
+    "submit": "บันทึก",
+    "cancel": "ยกเลิก",
+    "name": "ชื่อ",
+    "surname": "นามสกุล",
+    "email": "อีเมล",
+    "password": "รหัสผ่าน",
+    "birth_date": "วันเกิด",
+    "address": "ที่อยู่",
+    "gender": {
+      "label": "เพศ",
+      "male": "ชาย",
+      "female": "หญิง",
+      "other": "อื่นๆ"
+    }
+  },
+  "validation": {
+    "required_name": "กรุณากรอกชื่อ",
+    "required_surname": "กรุณากรอกนามสกุล",
+    "required_email": "กรุณากรอกอีเมล",
+    "valid_email": "รูปแบบอีเมลไม่ถูกต้อง",
+    "required_password": "กรุณากรอกรหัสผ่าน",
+    "password_min": "รหัสผ่านต้องมีอย่างน้อย 6 ตัวอักษร",
+    "required_birth_date": "กรุณาเลือกวันเกิด",
+    "required_gender": "กรุณาเลือกเพศ",
+    "required_address": "กรุณากรอกที่อยู่"
+  },
+   "table": {
+    "id": "ID",
+    "username": "ชื่อผู้ใช้",
+    "name": "ชื่อ",
+    "surname": "นามสกุล",
+    "gender": "เพศ",
+    "birth_date": "วันเกิด",
+    "address": "ที่อยู่",
+    "email": "อีเมล",
+    "action": "การกระทำ"
+  }
+}

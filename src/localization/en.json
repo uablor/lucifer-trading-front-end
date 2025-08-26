@@ -1,0 +1,76 @@
+{
+  "login": {
+    "welcome": "Welcome to the system",
+    "email": "Email",
+    "password": "Password",
+    "submit": "Submit",
+    "error": "Please input your email and password!",
+    "register": "Create an account ?"
+  },
+  "register": {
+    "title": "Register New User",
+    "name": "Name",
+    "email": "Email",
+    "password": "Password",
+    "confirmPassword": "Confirm Password",
+    "submit": "Register",
+    "error": "Please confirm your password!",
+    "passwordMismatch": "Passwords do not match!",
+    "goToLogin": "Go to login",
+    "confirm_18_years": "i am confirm that i am 18 years old or older"
+  },
+  "sidebar": {
+    "user_mgmt": "User Management",
+    "users": "Users",
+    "roles": "Roles",
+    "permissions": "Permissions",
+    "students": "Students",
+    "teachers": "Teachers",
+    "courses": "Courses",
+    "manage_courses": "Manage Courses",
+    "course_categories": "Course Categories",
+    "applications": "Applications",
+    "apply_courses": "Apply Courses",
+    "completion_records": "Completion Records"
+  },
+  "student": {
+    "add": "Add Student",
+    "modal_title": "Student Form",
+    "submit": "Save",
+    "cancel": "Cancel",
+    "name": "Name",
+    "surname": "Surname",
+    "email": "Email",
+    "password": "Password",
+    "birth_date": "Birth Date",
+    "address": "Address",
+    "gender": {
+      "label": "Gender",
+      "male": "Male",
+      "female": "Female",
+      "other": "Other"
+    }
+  },
+  "validation": {
+    "required_name": "Please input name",
+    "required_surname": "Please input surname",
+    "required_email": "Please input email",
+    "valid_email": "Email must be valid",
+    "required_password": "Please input password",
+    "password_min": "Password must be at least 6 characters",
+    "required_birth_date": "Please select birth date",
+    "required_gender": "Please select gender",
+    "required_address": "Please input address"
+  },
+  "table": {
+    "id": "ID",
+    "username": "Username",
+    "name": "Name",
+    "surname": "Surname",
+    "gender": "Gender",
+    "birth_date": "Birth Date",
+    "address": "Address",
+    "email": "Email",
+    "action": "Action"
+  }
+}
