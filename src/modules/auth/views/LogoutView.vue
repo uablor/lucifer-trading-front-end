@@ -1,14 +1,13 @@
 <template>
   <a-button 
-    type="text" 
-    danger 
+    size="large"
     @click="logout.showLogoutModal" 
     class="logout-trigger"
   >
-    <template #icon>
+    <div class="logout-icon">
       <LogoutOutlined />
-    </template>
-    ອອກຈາກລະບົບ
+    </div>
+
   </a-button>
 
   <a-modal
@@ -48,12 +47,36 @@ const logout = useLogout();
 .logout-trigger {
   display: flex;
   align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-color: transparent;  // ใช้ transparent แทน none
+  border: none;                   // เอาขอบออกด้วยถ้ามี
   gap: 8px;
-  
+  padding: 12px 24px;
+  font-size: 18px;
+  min-width: 140px;
+  height: 50px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  transform: scale(1);
+
+  .logout-icon {
+    font-size: 24px;
+    color: #fd090d;
+    transition: transform 0.3s ease;
+  }
+
   &:hover {
-    background-color: rgba(255, 77, 79, 0.1);
+    background-color: transparent; // ปุ่มยังโปร่งใสตอน hover
+    transform: scale(1.05);
+
+    .logout-icon {
+      transform: scale(1.2);
+    }
   }
 }
+
+
 
 .logout-content {
   display: flex;
@@ -87,7 +110,6 @@ const logout = useLogout();
   }
 }
 
-// Responsive design
 @media (max-width: 768px) {
   .logout-content {
     flex-direction: column;

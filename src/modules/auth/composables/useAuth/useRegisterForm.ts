@@ -4,16 +4,19 @@ import { useAuthStore } from "../../stores/authStore";
 import type { Rule } from "ant-design-vue/es/form";
 import { useI18n } from "vue-i18n";
 import { notification } from "ant-design-vue";
+import type { AxiosError } from "axios";
+import type { IErrorResponse } from "@/domain/models/IErrorResponse.interface";
 export function useRegisterForm() {
   const { t } = useI18n();
   const loading = ref(false);
   const authStore = useAuthStore();
 
-  const form = reactive<AuthRegisterPayload>({
-    name: "",
+ const form = reactive<AuthRegisterPayload>({
     email: "",
     password: "",
-    surname: "",
+    username: "",
+    confirm: false,
+    password2: "",
   });
 
     const openNotificationWithIcon = (
@@ -29,10 +32,11 @@ export function useRegisterForm() {
 
 
   const resetForm = () => {
-    form.name = "";
     form.email = "";
     form.password = "";
-    form.surname = "";
+    form.username = "";
+    form.confirm = false;
+    form.password2 = "";
   };
 
   const onFinish = async () => {
@@ -48,9 +52,11 @@ export function useRegisterForm() {
       }
 
     } catch (e: any) {
+      const error = e as AxiosError;
+      const err = error.response?.data as IErrorResponse;
       if (
-        e.response.data.statusCode === 400 &&
-        e.response.data.message === "User with this email already exists"
+        error.status === 400 &&
+        err.message === "User with this email already exists"
       ) {
         openNotificationWithIcon("error", "Error", "User with this email already exists");
       } else {

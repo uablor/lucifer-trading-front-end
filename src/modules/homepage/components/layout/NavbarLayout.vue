@@ -8,10 +8,11 @@
       <LanguageSwitcher @language-changed="onLanguageChanged" />
 
       <a-button type="primary" ghost >
-        <router-link to="/login">{{ $t('common.login') }}</router-link>
+        <router-link :to="{ name: 'auth.login' }">{{ $t('common.login') }}</router-link>
       </a-button>
+
       <a-button type="primary">
-        <router-link to="/register">{{ $t('common.register') }}</router-link>
+        <router-link :to="{ name: 'auth.register' }">{{ $t('common.register') }}</router-link>
       </a-button>
     </div>
   </a-layout-header>

@@ -8,6 +8,7 @@ import type { IErrorResponse } from "@/domain/models/IErrorResponse.interface";
 
 export function useLoginForm() {
   const form = reactive<AuthLoginPayload>({ email: "", password: "" });
+ 
   const loading = ref(false);
   const authStore = useAuthStore();
   const router = useRouter();
@@ -30,10 +31,10 @@ export function useLoginForm() {
       console.log(res.status);
       console.log(res);
       console.log(res.data);
-      if (res.status === 201) {
+      if (res.status === 200) {
         openNotificationWithIcon("success", "Success", "Login successful");
         localStorage.setItem("token", res.data.accessToken);
-        router.push({ name: "admin.student" });
+        await router.push({ name: "customer.profile" });
       } else {
         openNotificationWithIcon("error", "Error", "Login failed");
       }
@@ -42,12 +43,11 @@ export function useLoginForm() {
       const err = error.response?.data as IErrorResponse;
 
       if (
-        err.statusCode === 401 ||
-        err.message === "Invalid email or password"
-      ) {
+        error.status === 401 &&
+        err.message === "Invalid email or password") {
         openNotificationWithIcon("error", "Error", "Invalid email or password");
       } else if (
-        err.statusCode === 400 &&
+        error.status=== 400 &&
         err.message === "User is not verified"
       ) {
         openNotificationWithIcon("error", "Error", "User is not verified");

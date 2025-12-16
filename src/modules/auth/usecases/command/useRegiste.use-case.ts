@@ -15,6 +15,7 @@ export class RegisterUseCase {
 
     // this.authService.validateLogin(payload);
     console.log("sdfsdf",payload);
+
     const res = await this._authHttpRepository.register(payload);
 
     return res;

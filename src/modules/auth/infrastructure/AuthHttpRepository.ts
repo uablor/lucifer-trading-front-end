@@ -16,17 +16,18 @@ export class AuthHttpRepository implements IAuthRepository {
   async login(payload: AuthLoginPayload): Promise<AxiosResponse> {
       const res = await this._api.axios({
         method: "POST",
-        url: "/auth/login",
+        url: "/auth/login/",
         data: {...payload}});
       return res;
     
   }
 
   async register(payload: AuthRegisterPayload): Promise<AxiosResponse> {
+    const {confirm, ...data} = payload;
     const res = await this._api.axios({
       method: "POST",
-      url: "/students",
-      data: {...payload}
+      url: "/user/register/",
+      data: {...data}
     });
     return res;
   }

@@ -1,0 +1,35 @@
+// create module
+mkdir -p src/modules/customer/profile/components/crud \
+         src/modules/customer/profile/composables \
+         src/modules/customer/profile/domain/models \
+         src/modules/customer/profile/domain/repositories \
+         src/modules/customer/profile/infrastructure \
+         src/modules/customer/profile/router \
+         src/modules/customer/profile/usecases/command \
+         src/modules/customer/profile/usecases/query \
+         src/modules/customer/profile/views \
+         src/modules/customer/profile/stores && \
+         
+touch src/modules/customer/profile/components/crud/Create.profile.component.vue \
+      src/modules/customer/profile/components/crud/Delete.profile.component.vue \
+      src/modules/customer/profile/components/crud/Edit.profile.component.vue \
+      src/modules/customer/profile/components/crud/List.profile.component.vue \
+      src/modules/customer/profile/components/crud/Search.profile.component.vue \
+      src/modules/customer/profile/components/crud/Softdelete.profile.component.vue \
+      src/modules/customer/profile/components/crud/Filte.profile.component.vue \
+      src/modules/customer/profile/components/List.profile.component.vue \
+         src/modules/customer/profile/composables/profile.composables.ts \
+         src/modules/customer/profile/domain/models/profile.model.ts \
+         src/modules/customer/profile/domain/repositories/Iprofile.repository.ts \
+         src/modules/customer/profile/infrastructure/profile.Httprepository.ts \
+         src/modules/customer/profile/router/profile.routes.ts \
+         src/modules/customer/profile/usecases/command/create.profile.ts \
+         src/modules/customer/profile/usecases/command/update.profile.ts \
+         src/modules/customer/profile/usecases/command/delete.profile.ts \
+         src/modules/customer/profile/usecases/command/restore.profile.ts \
+         src/modules/customer/profile/usecases/query/get.all.profile.ts \
+         src/modules/customer/profile/usecases/query/get.one.profile.ts \
+         src/modules/customer/profile/views/profileView.vue \
+         src/modules/customer/profile/stores/profile.store.ts
+
+      

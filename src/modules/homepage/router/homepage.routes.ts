@@ -1,9 +1,10 @@
 // src/router/routes/auth.routes.ts
+import { authRoutes } from "@/modules/auth/router/auth.routes";
 import type { RouteRecordRaw } from "vue-router";
 
 export const HomepageRoutes: RouteRecordRaw[] = [
   {
-    path: "/Homepage",
+    path: "/homepage",
     component: () => import("../components/layout/HomepageLayout.vue"),
     meta: {
       skipAuthCheck: true,
@@ -16,6 +17,9 @@ export const HomepageRoutes: RouteRecordRaw[] = [
         meta: {
           skipAuthCheck: true,
         },
+        children: [
+          ...authRoutes
+        ],
       },
     ],
   },

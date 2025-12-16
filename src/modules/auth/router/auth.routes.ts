@@ -3,7 +3,7 @@ import type { RouteRecordRaw } from "vue-router";
 
 export const authRoutes: RouteRecordRaw[] = [
   {
-    path: "/login",
+    path: "login",
     name: "auth.login",
     component: () => import("@modules/auth/views/LoginView.vue"),
     meta: {
@@ -11,7 +11,7 @@ export const authRoutes: RouteRecordRaw[] = [
     },
   },
   {
-    path: "/register",
+    path: "register",
     name: "auth.register",
     component: () => import("@modules/auth/views/RegisterView.vue"),
     meta: {
@@ -19,7 +19,7 @@ export const authRoutes: RouteRecordRaw[] = [
     },
   },
   {
-    path: "/logout",
+    path: "logout",
     name: "auth.logout",
     // redirect: () => {
     //   const { useAuthStore } = useAuthStoreDynamic()
@@ -32,7 +32,7 @@ export const authRoutes: RouteRecordRaw[] = [
     },
   },
   {
-    path: "/verify-email",
+    path: "verify-email",
     name: "auth.verify-email",
     component: () => import("@/modules/auth/views/email/TestView.vue"),
     meta: {
@@ -40,7 +40,7 @@ export const authRoutes: RouteRecordRaw[] = [
     },
   },
   {
-    path: "/verification-email",
+    path: "verification-email",
     name: "auth.verification-email",
     component: () => import("@/modules/auth/views/email/EmailVerificationPage.vue"),
     meta: {
@@ -48,7 +48,7 @@ export const authRoutes: RouteRecordRaw[] = [
     },
   },
   {
-    path: "/token-expired",
+    path: "token-expired",
     name: "auth.token-expired",
     component: () => import("@/modules/auth/views/token-wrranig/Token-expired.vue"),
     meta: {
